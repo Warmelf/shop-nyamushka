@@ -173,3 +173,20 @@
 .card__circle.disabled {
     background-color: #b3b3b3;
 }
+
+@media screen and (max-width: 1200px) {
+    /* .card__wrapper  {
+        width: 30%;
+    } */
+    /* .card__bg-blue {
+        background: url('./card-blue-25.svg') no-repeat;
+    } */
+    
+    .card__bg-blue.choosed {
+        background: url('./card-red-25.svg') no-repeat;
+    }
+    
+    .card__bg-blue.disabled {
+        background: url('./card-disabled-25.svg') no-repeat;
+    }
+}

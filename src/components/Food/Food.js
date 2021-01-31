@@ -6,20 +6,25 @@ class Food extends React.Component {
     state = {
         choosed: false,
         disabled: false,
-        count: 2
+        clickCount: 2,
+        availableCount: 7
     };
 
     isChoosed = () => {
-        this.setState({ count: this.state.count + 1 });
-        if ((this.state.count % 2) === 0) {
-            this.setState({ choosed: true });
+        this.setState({ 
+            clickCount: this.state.clickCount + 1
+        });
+        if ((this.state.clickCount % 2) === 0) {
+            this.setState({ 
+                choosed: true,
+                availableCount: this.state.availableCount - 1 
+            });
         } else {
             this.setState({ choosed: false });
-        }
-    }
-
-    isDisabled = () => {
-        this.setState({ disabled: true });
+        };
+        if (this.state.availableCount  === 0) {
+            this.setState({ disabled: true });
+        };
     }
 
     render() {
@@ -28,7 +33,8 @@ class Food extends React.Component {
                 <div className={`card ${this.state.disabled ? "disabled" : null}`} 
                 onClick={() => {
                         this.isChoosed();
-                }}>  
+                }}
+                onMouseLeave={this.handleHoverOff}>  
                     <div className={`card__bg-blue 
                     ${this.state.choosed ? "choosed" : null}
                     ${this.state.disabled ? "disabled" : null}`}>
@@ -64,7 +70,7 @@ class Food extends React.Component {
                     Печалька, с {this.props.taste} закончился.
                 </p>
                 <p className={`card__tagline ${
-                    !this.state.choosed ? "hidden" : null
+                    !this.state.choosed || this.state.disabled ? "hidden" : null
                 }`}>
                    {this.props.taglineSelected}
                 </p>

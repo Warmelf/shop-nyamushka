@@ -36,18 +36,16 @@ class App extends React.Component {
     render()  {
         return (
             <div className="outer">
-                <div className="inner">
-                    <div className="app">
-                        <h1 className="app-title">Ты сегодня покормил кота?</h1>
-                        <div className="all-cards-wrapper">
-                            {this.state.data.map((el) => {
-                                return (
-                                    <div className="mr">
-                                        <Food {...el} />
-                                    </div>
-                                );
-                            })}
-                        </div>
+                <div className="app">
+                    <h1 className="app-title">Ты сегодня покормил кота?</h1>
+                    <div className="all-cards-wrapper">
+                        {this.state.data.map((el) => {
+                            return (
+                                <div className="mr">
+                                    <Food {...el} />
+                                </div>
+                            );
+                        })}
                     </div>
                 </div>
             </div>

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="258pt" height="387pt" viewBox="0 0 258 387" version="1.1">
+<defs>
+<clipPath id="clip1">
+  <path d="M 1 1 L 257 1 L 257 386 L 1 386 Z M 1 1 "/>
+</clipPath>
+<clipPath id="clip2">
+  <path d="M 36.28125 0 L 258 0 L 258 387 L 0 387 L 0 38.699219 Z M 36.28125 0 "/>
+</clipPath>
+<clipPath id="clip3">
+  <path d="M 36.28125 0 L 258 0 L 258 387 L 0 387 L 0 38.699219 Z M 36.28125 0 "/>
+</clipPath>
+</defs>
+<g id="surface1">
+<g clip-path="url(#clip1)" clip-rule="nonzero">
+<g clip-path="url(#clip2)" clip-rule="nonzero">
+<path style=" stroke:none;fill-rule:nonzero;fill:rgb(94.901961%,94.901961%,94.901961%);fill-opacity:1;" d="M 12.898438 1.613281 L 245.101562 1.613281 C 251.332031 1.613281 256.386719 6.667969 256.386719 12.898438 L 256.386719 374.101562 C 256.386719 380.332031 251.332031 385.386719 245.101562 385.386719 L 12.898438 385.386719 C 6.667969 385.386719 1.613281 380.332031 1.613281 374.101562 L 1.613281 12.898438 C 1.613281 6.667969 6.667969 1.613281 12.898438 1.613281 Z M 12.898438 1.613281 "/>
+</g>
+</g>
+<g clip-path="url(#clip3)" clip-rule="nonzero">
+<path style="fill:none;stroke-width:4;stroke-linecap:butt;stroke-linejoin:miter;stroke:rgb(18.039216%,65.882353%,90.196078%);stroke-opacity:1;stroke-miterlimit:4;" d="M 15.998062 2.000969 L 304.001938 2.000969 C 311.729651 2.000969 317.999031 8.270349 317.999031 15.998062 L 317.999031 464.001938 C 317.999031 471.729651 311.729651 477.999031 304.001938 477.999031 L 15.998062 477.999031 C 8.270349 477.999031 2.000969 471.729651 2.000969 464.001938 L 2.000969 15.998062 C 2.000969 8.270349 8.270349 2.000969 15.998062 2.000969 Z M 15.998062 2.000969 " transform="matrix(0.80625,0,0,0.80625,0,0)"/>
+</g>
+<path style="fill-rule:nonzero;fill:rgb(0%,0%,0%);fill-opacity:1;stroke-width:4;stroke-linecap:butt;stroke-linejoin:miter;stroke:rgb(18.039216%,65.882353%,90.196078%);stroke-opacity:1;stroke-miterlimit:4;" d="M 2.000969 47.999031 L 45 2.000969 " transform="matrix(0.80625,0,0,0.80625,0,0)"/>
+</g>
+</svg>
