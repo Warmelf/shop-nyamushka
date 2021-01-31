@@ -49,3 +49,7 @@
 .mr {
     margin-right: 80px;
 }
+
+.mr:last-child {
+    margin-right: 0;
+}

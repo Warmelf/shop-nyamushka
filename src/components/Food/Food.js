@@ -4,14 +4,25 @@ import Cat from './cat.png';
 
 class Food extends React.Component {
     state = {
-
+        choosed: false,
+        disabled: false,
     };
+
+    isChoosed = () => {
+        this.setState({ choosed: true });
+    }
+
+    isDisabled = () => {
+        this.setState({ disabled: true });
+    }
 
     render() {
         return (   
             <div className="card__wrapper"> 
                 <div className="card">  
-                    <div className="card__bg-blue">
+                    <div className={`card__bg-blue ${
+                        this.state.choosed ? "choosed" : null
+                        }`}>
                         <div className="card__description">
                             <p className="card__title">Сказочное заморское явство</p>
                             <h1 className="card__main-title">Нямушка</h1>
@@ -21,13 +32,33 @@ class Food extends React.Component {
                             <p className="card__text">{this.props.postscript}</p>
                         </div>
                         <img src={Cat} alt="Кот, который хочет Нямушку" className="cat-img" />
-                        <div className="card__circle">
-                            <p className="card__circle-number">{this.props.packageWeight}</p><p className="card__circle-text">кг</p>
+                        <div className={`card__circle ${
+                        this.state.choosed ? "choosed" : null
+                        }`}>
+                            <p className="card__circle-number">{this.props.packageWeight}</p>
+                            <p className="card__circle-text">кг</p>
                         </div>
                     </div>
                 </div> 
-                <p className="card__tagline">Чего сидишь? Порадуй котэ, <a href="../" className="card__tagline__link">купи.</a></p>
-                <p className="card__tagline card__tagline-disabled hidden">Печалька, с {this.props.taste} закончился.</p>
+                <p className={`card__tagline ${
+                    this.state.disabled || this.state.choosed ? "hidden" : null
+                    }`}>
+                    Чего сидишь? Порадуй котэ, {' '}
+                    <button className="card__tagline__button"
+                    onClick={() => {
+                        this.isChoosed();
+                    }}>купи.</button>
+                </p>
+                <p className={`card__tagline card__tagline-disabled ${
+                    !this.state.disabled ? "hidden" : null
+                }`}>
+                    Печалька, с {this.props.taste} закончился.
+                </p>
+                <p className={`card__tagline ${
+                    !this.state.choosed ? "hidden" : null
+                }`}>
+                   {this.props.taglineSelected}
+                </p>
             </div>
         );
     }

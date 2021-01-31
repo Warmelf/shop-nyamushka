@@ -65,6 +65,10 @@
     height: 480px;
 }
 
+.card__bg-blue.choosed {
+    background: url('./card-red.svg') no-repeat;
+}
+
 .card__title {
     font-size: 16px;
     color: #666;
@@ -115,6 +119,10 @@
     box-sizing: border-box;
 }
 
+.card__circle.choosed {
+    background-color: #d91667;
+}
+
 .card__circle-number {
     font-size: 42px;
     color: #fff;
@@ -135,10 +143,14 @@
     text-align: center; 
 }
 
-.card__tagline__link {
+.card__tagline__button {
     color: #2ea8e6;
     text-decoration: none;
+    border: none;
     border-bottom: 1px dashed #2ea8e6;
+    background: none;
+    outline: none;
+    cursor: pointer;
 }
 
 .card__tagline-disabled {
