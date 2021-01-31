@@ -6,10 +6,16 @@ class Food extends React.Component {
     state = {
         choosed: false,
         disabled: false,
+        count: 2
     };
 
     isChoosed = () => {
-        this.setState({ choosed: true });
+        this.setState({ count: this.state.count + 1 });
+        if ((this.state.count % 2) === 0) {
+            this.setState({ choosed: true });
+        } else {
+            this.setState({ choosed: false });
+        }
     }
 
     isDisabled = () => {
@@ -19,10 +25,13 @@ class Food extends React.Component {
     render() {
         return (   
             <div className="card__wrapper"> 
-                <div className="card">  
-                    <div className={`card__bg-blue ${
-                        this.state.choosed ? "choosed" : null
-                        }`}>
+                <div className={`card ${this.state.disabled ? "disabled" : null}`} 
+                onClick={() => {
+                        this.isChoosed();
+                }}>  
+                    <div className={`card__bg-blue 
+                    ${this.state.choosed ? "choosed" : null}
+                    ${this.state.disabled ? "disabled" : null}`}>
                         <div className="card__description">
                             <p className="card__title">Сказочное заморское явство</p>
                             <h1 className="card__main-title">Нямушка</h1>
@@ -32,9 +41,9 @@ class Food extends React.Component {
                             <p className="card__text">{this.props.postscript}</p>
                         </div>
                         <img src={Cat} alt="Кот, который хочет Нямушку" className="cat-img" />
-                        <div className={`card__circle ${
-                        this.state.choosed ? "choosed" : null
-                        }`}>
+                        <div className={`card__circle 
+                        ${this.state.choosed ? "choosed" : null}
+                        ${this.state.disabled ? "disabled" : null}`}>
                             <p className="card__circle-number">{this.props.packageWeight}</p>
                             <p className="card__circle-text">кг</p>
                         </div>

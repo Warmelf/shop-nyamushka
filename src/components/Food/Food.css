@@ -57,6 +57,7 @@
     position: relative;
     border-radius: 12px;
     margin-bottom: 15px;
+    cursor: pointer;
 }
 
 .card__bg-blue {
@@ -67,6 +68,10 @@
 
 .card__bg-blue.choosed {
     background: url('./card-red.svg') no-repeat;
+}
+
+.card__bg-blue.disabled {
+    background: url('./card-disabled.svg') no-repeat;
 }
 
 .card__title {
