@@ -49,19 +49,3 @@
 .mr:last-child {
     margin-right: 0;
 }
-
-@media screen and (max-width: 1200px) {  
-    /* .app-title {
-        font-family: 'Exo2.0';
-        font-size: 36px;
-        color: #fff;
-        text-align: center;
-        font-weight: 300;
-        margin-bottom: 23px;
-    }
-    
-    .all-cards-wrapper {
-        display: flex;
-        flex-wrap: wrap;
-    } */
-}
